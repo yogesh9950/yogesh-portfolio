@@ -1,0 +1,117 @@
+.edu-section {
+  position: relative;
+  z-index: 1;
+  background: var(--bg);
+}
+
+.edu-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.edu-col-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 24px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px; top: 10px; bottom: 10px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--teal), transparent);
+}
+
+.tl-item {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.tl-dot {
+  position: absolute;
+  left: -20px; top: 14px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+}
+
+.tl-card {
+  display: flex;
+  gap: 14px;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 18px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.tl-card:hover { transform: translateX(6px); border-color: rgba(0,212,170,0.3); }
+
+.tl-icon { font-size: 1.5rem; flex-shrink: 0; }
+.tl-card h4 { font-size: 0.9rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+.tl-card p  { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 8px; }
+
+.tl-foot { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.tl-year  { font-size: 0.78rem; color: var(--text-muted); }
+.tl-badge { font-size: 0.72rem; font-weight: 600; padding: 2px 10px; border-radius: 50px; }
+
+/* Certs */
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.cert-item:hover { transform: translateX(6px); border-color: var(--cc, var(--teal)); }
+
+.cert-icon {
+  width: 46px; height: 46px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.cert-item h4 { font-size: 0.92rem; font-weight: 600; color: var(--white); margin-bottom: 3px; }
+.cert-item p  { font-size: 0.8rem; color: var(--text-muted); }
+.cert-check { margin-left: auto; color: var(--teal); font-weight: 700; font-size: 1.1rem; flex-shrink: 0; }
+
+/* Strengths */
+.strength-box {
+  margin-top: 24px;
+  background: rgba(0,212,170,0.05);
+  border: 1px solid rgba(0,212,170,0.15);
+  border-radius: 12px;
+  padding: 20px;
+}
+.strength-box h4 { font-size: 0.92rem; font-weight: 600; color: var(--white); margin-bottom: 14px; }
+.strength-list { display: flex; flex-direction: column; gap: 10px; }
+.strength-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.88rem; color: var(--text-muted);
+}
+.s-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .edu-layout { grid-template-columns: 1fr; gap: 40px; }
+}
