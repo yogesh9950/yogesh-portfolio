@@ -85,7 +85,7 @@ export default function Contact() {
     email: form.email,
     message: form.message,
   },
-  'GOoNe7dA4ESmqCNJmALHa'
+  'pcEMXe4kzhaDjsol4'
 )
 
     setSent(true)
