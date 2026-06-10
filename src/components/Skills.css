@@ -1,0 +1,108 @@
+.skills-section {
+  position: relative;
+  z-index: 1;
+  background: var(--bg);
+}
+
+.eyebrow {
+  color: var(--teal);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.skills-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.skills-sub {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.skill-row { margin-bottom: 18px; }
+.skill-row__top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.skill-track {
+  background: rgba(255,255,255,0.06);
+  border-radius: 50px;
+  height: 7px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  border-radius: 50px;
+  background: var(--sc, var(--teal));
+  transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+  position: relative;
+}
+.skill-fill::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: inherit;
+  box-shadow: 0 0 8px var(--sc, var(--teal));
+}
+
+/* Tags */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: default;
+  transition: all 0.3s;
+}
+.tag--teal {
+  background: rgba(0,212,170,0.08);
+  border: 1px solid rgba(0,212,170,0.22);
+  color: var(--teal);
+}
+.tag--blue {
+  background: rgba(97,218,251,0.08);
+  border: 1px solid rgba(97,218,251,0.2);
+  color: #61dafb;
+}
+.tag:hover { transform: translateY(-2px); filter: brightness(1.2); }
+
+.skills-note {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-top: 24px;
+  background: rgba(0,212,170,0.06);
+  border: 1px solid rgba(0,212,170,0.15);
+  border-radius: 10px;
+  padding: 16px;
+}
+.skills-note span { font-size: 1.3rem; flex-shrink: 0; }
+.skills-note p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+
+@media (max-width: 768px) {
+  .skills-layout { grid-template-columns: 1fr; gap: 40px; }
+}

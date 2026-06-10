@@ -1,0 +1,27 @@
+.code-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.code-symbol {
+  position: absolute;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: clamp(0.9rem, 1.5vw, 1.4rem);
+  color: var(--teal);
+  white-space: nowrap;
+  user-select: none;
+  animation: float-code 8s ease-in-out infinite;
+}
+
+.code-symbol:nth-child(odd) {
+  animation-direction: alternate;
+  animation-duration: 10s;
+}
+
+@keyframes float-code {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50%       { transform: translateY(-12px) rotate(var(--r, 0deg)); }
+}
